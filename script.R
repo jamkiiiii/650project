@@ -188,7 +188,16 @@ new_data <- cbind(impute_result$outcome,
 
 
 summary(new_data)
- ###
+### Scatter plot for Depresion vs. predictor of interest
+ggplot(new_data, aes(x = TOTIADL4, y = CESDTOT4)) + 
+  geom_point(color = "blue")+
+  geom_smooth(method = lm, color = "red", fill="#69b3a2", se = TRUE)
+
+ggplot(new_data, aes(x = EE46, y = CESDTOT4)) + 
+  geom_point(color = "blue")+
+  geom_smooth(method = lm, color = "red", fill="#69b3a2", se = TRUE)
+
+
 
 
 
